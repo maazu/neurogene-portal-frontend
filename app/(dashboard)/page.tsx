@@ -2,7 +2,7 @@ import { ChartAreaInteractive } from '@/components/charts/chart-area-interactive
 import { DataTable } from '@/components/tables/data-table';
 import { SectionCards } from '@/components/cards/section-cards';
 
-// import data from './data.json';
+import data from './data.json';
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
           <div className='px-4 lg:px-6'>
             <ChartAreaInteractive />
           </div>
-          {/* <DataTable data={data} /> */}
+          <DataTable data={data} />
         </div>
       </div>
     </div>
