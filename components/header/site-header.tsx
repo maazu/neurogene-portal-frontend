@@ -1,6 +1,5 @@
 import { Separator } from '@/components/ui/separator';
 import { SidebarTrigger } from '@/components/ui/sidebar';
-import { GeneSearchInput } from '../forms/gene-search-input-form';
 
 export function SiteHeader() {
   return (
@@ -11,7 +10,6 @@ export function SiteHeader() {
           orientation='vertical'
           className='mx-2 data-[orientation=vertical]:h-4'
         />
-        <GeneSearchInput />
       </div>
     </header>
   );
