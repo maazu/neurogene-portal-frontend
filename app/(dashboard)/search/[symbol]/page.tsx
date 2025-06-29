@@ -1,13 +1,9 @@
 import { notFound } from 'next/navigation';
+import React from 'react';
 
-interface GenePageProps {
-  params: {
-    symbol: string;
-  };
-}
-
-export default function GenePage({ params }: GenePageProps) {
-  const symbol = decodeURIComponent(params.symbol).toUpperCase();
+export default function GenePage({ params }) {
+  const { symbol } = React.use(params);
+  // const symbol = decodeURIComponent(sym).toUpperCase();
 
   // Optional: Validate the symbol format
   const isValidSymbol = /^[A-Z0-9\-]+$/.test(symbol);
