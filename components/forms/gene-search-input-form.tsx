@@ -37,7 +37,7 @@ export function GeneSearchInput() {
   const handleSuggestionClick = (symbol: string) => {
     setQuery(symbol);
     setShowSuggestions(false);
-    router.push(`/gene-search/${symbol}`);
+    router.push(`/gene/${symbol}`);
   };
 
   return (

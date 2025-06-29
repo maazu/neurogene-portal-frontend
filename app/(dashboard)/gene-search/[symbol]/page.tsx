@@ -19,7 +19,10 @@ export default function GenePage({ params }: GenePageProps) {
     <main className='p-6'>
       <h1 className='text-2xl font-semibold mb-4'>Gene Search Result</h1>
       <p className='text-lg'>
-        You searched for: <strong>{symbol}</strong>
+        Search results for <strong>{symbol}</strong>
+      </p>
+      <p className='font-medium mt-2'>
+        We couldn't find any results matching the search criteria
       </p>
     </main>
   );
