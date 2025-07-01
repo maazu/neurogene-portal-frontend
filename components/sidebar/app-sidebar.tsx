@@ -29,8 +29,8 @@ import {
 
 const data = {
   user: {
-    name: 'test user',
-    email: 'm@example.com',
+    name: 'Guest',
+    email: 'user@guest.com',
     avatar: '/avatars/shadcn.jpg',
   },
   navMain: [
@@ -139,7 +139,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
+        {/* <NavDocuments items={data.documents} /> */}
         <NavSecondary items={data.navSecondary} className='mt-auto' />
       </SidebarContent>
       <SidebarFooter>

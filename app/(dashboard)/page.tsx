@@ -86,21 +86,22 @@ export default function Home() {
       <nav className='w-full max-w-2xl text-white text-sm mb-6'>
         <a href='#' className='underline'>
           Neurogene Search
-        </a>{' '}
+        </a>
         &gt; <span className='font-semibold'>Advanced search</span>
       </nav>
 
       {/* Search Card */}
       <div className='bg-white rounded-xl shadow-lg p-8 w-full max-w-2xl text-center'>
-        <h2 className='text-sm text-gray-600 mb-1'>
-          Oxford Paediametrics and Genomics
-        </h2>
         <h1 className='text-3xl font-bold mb-4'>Neurogene Search</h1>
+
+        <h2 className='text-sm text-gray-600 mb-5'>
+          Where Pediatric Data Meets Genomic Discovery
+        </h2>
 
         <div className='relative' ref={containerRef}>
           <div className='flex gap-2'>
             <Input
-              placeholder='Find a gene'
+              placeholder='Find a gene E.g SCN2A, SYNGAP1, or XIST'
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
@@ -149,7 +150,7 @@ export default function Home() {
 
         <div className='text-sm text-gray-500 mt-4'>
           Examples:{' '}
-          <a href='/search/SCN2A' className='text-blue-600 underline'>
+          <a href='/gene/SCN2A' className='text-blue-600 underline'>
             SCN2A
           </a>
         </div>

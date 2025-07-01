@@ -9,7 +9,7 @@ export default function Page({
   children: React.ReactNode;
 }>) {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <AppSidebar variant='inset' />
       <SidebarInset>
         <SiteHeader />
