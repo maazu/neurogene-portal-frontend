@@ -37,12 +37,6 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  interface Gene {
-    id: string;
-    symbol: string;
-    name: string;
-  }
-
   // Debounce updating debouncedQuery
   useEffect(() => {
     const handler = debounce(() => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { HomeIcon, SearchIcon, type LucideIcon } from 'lucide-react';
+import { SearchIcon, type LucideIcon } from 'lucide-react';
 
 import {
   SidebarGroup,

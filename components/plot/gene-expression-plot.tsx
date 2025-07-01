@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { useGenePlot } from '@/hooks/useGenePlot';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 
 // Dynamically import Plotly to avoid SSR issues
 import type { PlotParams } from 'react-plotly.js';
@@ -16,7 +16,6 @@ export default function GeneExpressionPlot(symbolProp: { symbol?: string }) {
   const [symbol] = useState(symbolProp.symbol ?? '');
   const { data, isFetching, error } = useGenePlot(symbol);
 
-  // Build traces
   // Build traces
   const traces = React.useMemo(() => {
     if (!data) return [];
@@ -118,6 +117,7 @@ export default function GeneExpressionPlot(symbolProp: { symbol?: string }) {
         },
       ];
     });
+
     return {
       title: {
         text: `Gene: ${data.ensembl_id}, Symbol: ${data.gene_symbol} log2CPM`,
@@ -140,7 +140,6 @@ export default function GeneExpressionPlot(symbolProp: { symbol?: string }) {
   return (
     <main className='my-4 w-full'>
       <Card>
-        <CardHeader></CardHeader>
         <CardContent>
           {isFetching && <p>Loading...</p>}
           {error && <p className='text-red-600'>{error.message}</p>}
