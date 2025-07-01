@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import debounce from 'lodash.debounce';
+import Link from 'next/link';
 
 interface Gene {
   id: string;
@@ -150,9 +151,9 @@ export default function Home() {
 
         <div className='text-sm text-gray-500 mt-4'>
           Examples:{' '}
-          <a href='/gene/SCN2A' className='text-blue-600 underline'>
+          <Link href='/gene/SCN2A' className='text-blue-600 underline'>
             SCN2A
-          </a>
+          </Link>
         </div>
       </div>
     </main>
