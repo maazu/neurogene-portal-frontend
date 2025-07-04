@@ -15,16 +15,7 @@ export default function GenePage({ params }: GenePageProps) {
   const { symbol: rawSymbol } = React.use(params);
   const symbol = decodeURIComponent(rawSymbol).toUpperCase();
 
-  const {
-    data: gene,
-    isLoading,
-    isError,
-    error,
-  } = useGene(symbol, {
-    retry: false,
-    staleTime: 1000 * 60 * 10,
-    queryKey: [],
-  });
+  const { data: gene, isLoading, isError, error } = useGene(symbol);
 
   useEffect(() => {
     // Redirect if error includes 404
@@ -66,14 +57,14 @@ export default function GenePage({ params }: GenePageProps) {
           </CardTitle>
         </CardHeader>
         <CardContent className='space-y-4'>
-          <dl className='grid grid-cols-3 gap-x-6 gap-y-4'>
+          <dl className='grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4'>
             <div>
               <dt className='font-semibold'>HGNC ID</dt>
               <dd>{gene.hgnc_id ?? 'N/A'}</dd>
             </div>
             <div>
               <dt className='font-semibold'>Ensembl ID</dt>
-              <dd>{gene.ensembl_id.length === 0 ? 'N/A' : gene.ensembl_id}</dd>
+              <dd>{gene?.ensembl_id.length === 0 ? 'N/A' : gene.ensembl_id}</dd>
             </div>
             <div>
               <dt className='font-semibold'>Entrez ID</dt>
