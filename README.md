@@ -8,14 +8,11 @@ This frontend is designed to interact with a Django-based backend API, which gen
 🔎 Gene Search Interface
 Enter a gene symbol (e.g., SCN2A, SYNGAP1) to explore expression trends.
 
-📉 Smooth PDF Plot Download
-Visualizations are served as downloadable PDF files via the API.
+📉 Smooth Plot Download
+Visualizations are served as downloadable pnf.
 
 🎨 Modern UI
 Built with shadcn/ui, offering a responsive, clean, and accessible interface.
-
-🌐 Fast & SEO-Friendly
-Leveraging the power of Next.js for fast, server-rendered React apps.
 
 ## 🧰 Tech Stack
 
