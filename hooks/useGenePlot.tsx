@@ -23,7 +23,7 @@ export const useGenePlot = (symbol: string) => {
     queryKey: ['genePlot', symbol],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:8000/api/gene-engine/gene-plot/?format=json&symbol=${encodeURIComponent(
+        `https://api.neurogenesai.com/api/gene-engine/gene-plot/?format=json&symbol=${encodeURIComponent(
           symbol
         )}`
       );
