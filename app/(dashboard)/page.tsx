@@ -22,7 +22,7 @@ interface ApiResponse {
 const fetchGeneSuggestions = async (q: string): Promise<Gene[]> => {
   if (q.length < 0) return [];
   const res = await fetch(
-    `http://localhost:8000/api/gene-engine/gene/?symbol__istartswith=${encodeURIComponent(
+    `https://api.neurogenesai.com/api/gene-engine/gene/?symbol__istartswith=${encodeURIComponent(
       q
     )}`
   );
