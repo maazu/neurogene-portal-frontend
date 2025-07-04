@@ -60,12 +60,6 @@ export default function GenePage({ params }: GenePageProps) {
 
   return (
     <main className='p-6 w-full mx-auto'>
-      <Button
-        className='mt-4 px-4 float-end py-1 cursor-pointer text-white rounded '
-        onClick={() => router.push('/')}
-      >
-        Go Back
-      </Button>
       <Card>
         <CardHeader>
           <CardTitle className='text-2xl'>
