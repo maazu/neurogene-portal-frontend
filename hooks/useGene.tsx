@@ -18,7 +18,7 @@ const fetchGeneDetails = async (symbol: string): Promise<GeneDetails> => {
   }
 
   const res = await fetch(
-    `http://localhost:8000/api/gene-engine/gene/?symbol=${encodeURIComponent(
+    `https://api.neurogenesai.com/api/gene-engine/gene/?symbol=${encodeURIComponent(
       symbol
     )}`
   );
